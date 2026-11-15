@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Register for Holkar TechFest 2026. Get your instant digital participant pass and ID badge.">
+  <title>Registration & Pass Generator | Holkar TechFest 2026</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="bg-glow"></div>
+
+  <!-- Header & Navigation -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon">H</div>
+        <div class="brand-text">
+          <h1>Holkar TechFest</h1>
+          <span>Edition 2026</span>
+        </div>
+      </a>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">☰</button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="register.html" class="active nav-cta">Register Now</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="section-header">
+      <div class="college-badge">Online Portal</div>
+      <h2>Student Registration & Digital Pass</h2>
+      <p>Fill out the form below. Your official Holkar TechFest 2026 ID badge will generate dynamically in real-time.</p>
+    </div>
+
+    <!-- Registration Split Grid -->
+    <div class="registration-wrapper">
+      <!-- Left: Form -->
+      <section class="form-card">
+        <h3 style="margin-bottom: 1.5rem; font-size: 1.35rem;">Delegate Registration Form</h3>
+
+        <form id="registrationForm">
+          <div class="form-group">
+            <label for="fullName">Full Name *</label>
+            <input type="text" id="fullName" class="form-control" placeholder="e.g. Rahul Sharma" required autocomplete="off">
+          </div>
+
+          <div class="form-group">
+            <label for="collegeName">College / University Name *</label>
+            <input type="text" id="collegeName" class="form-control" placeholder="e.g. Govt. Holkar Science College" required autocomplete="off">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Student Email Address *</label>
+            <input type="email" id="email" class="form-control" placeholder="rahul@example.com" required autocomplete="off">
+          </div>
+
+          <div class="form-group">
+            <label for="phone">WhatsApp / Mobile Number *</label>
+            <input type="tel" id="phone" class="form-control" placeholder="9876543210" pattern="[0-9]{10}" title="Please enter a valid 10-digit mobile number" required>
+          </div>
+
+          <div class="form-group">
+            <label for="eventSelect">Choose Primary Competition *</label>
+            <select id="eventSelect" class="form-control" required>
+              <option value="" disabled selected>-- Select an Event --</option>
+              <option value="WebCraft: CSS & Frontend Battle">WebCraft: CSS & Frontend Battle (Web Design)</option>
+              <option value="CodeSprint 24-Hr Hackathon">CodeSprint 24-Hr Hackathon (CS)</option>
+              <option value="PixelPlay: App Redesign Sprint">PixelPlay: App Redesign Sprint (Design)</option>
+              <option value="Bug Hunt: Reverse Engineering">Bug Hunt: Reverse Engineering (CS)</option>
+              <option value="Campus BGMI Championship">Campus BGMI Championship (Esports)</option>
+              <option value="RoboWars: Arena Clash">RoboWars: Arena Clash (Robotics)</option>
+              <option value="Tech Trivia: The CS Olympiad">Tech Trivia: The CS Olympiad (Quiz)</option>
+              <option value="Terminal Dash & Speed Code">Terminal Dash & Speed Code (CS)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="teamSize">Participation Type</label>
+            <select id="teamSize" class="form-control">
+              <option value="Individual">Individual Participant</option>
+              <option value="Team Duo">Team of 2</option>
+              <option value="Team Squad">Team of 3-4</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 1rem;">
+            Submit & Issue Pass
+          </button>
+        </form>
+      </section>
+
+      <!-- Right: Real-Time Dynamic Pass Preview -->
+      <section class="pass-container">
+        <h4 style="margin-bottom: 1rem; color: var(--accent-cyan); font-weight: 600;">Live Virtual Pass Preview</h4>
+
+        <div class="pass-card" id="printablePass">
+          <div class="pass-header">
+            <div class="pass-title">
+              <h4>HOLKAR TECHFEST 2026</h4>
+              <span>Govt. Model Science College, Indore</span>
+            </div>
+            <div class="pass-badge">OFFICIAL DELEGATE</div>
+          </div>
+
+          <div class="pass-body">
+            <div class="pass-avatar">👤</div>
+            <div class="pass-details">
+              <h3 id="passName">Your Name</h3>
+              <p id="passCollege">Holkar Science College / Institution</p>
+              <p class="pass-event-tag" id="passEvent">Select an Event</p>
+            </div>
+          </div>
+
+          <div class="pass-footer">
+            <div>
+              <span style="font-size: 0.75rem; color: var(--text-muted); display: block;">DELEGATE ID</span>
+              <strong id="passId" style="color: #fff; font-size: 0.95rem;">HLK-749210</strong>
+            </div>
+            <div class="barcode" id="barcodeNumber">*HLK-749210*</div>
+          </div>
+        </div>
+
+        <button type="button" id="printPassBtn" class="btn btn-secondary" style="width: 100%; justify-content: center;">
+          🖨️ Print / Save Pass As PDF
+        </button>
+        <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.75rem;">
+          Present this digital or printed pass at the college registration desk on event day.
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <!-- Registration Success Modal -->
+  <div class="modal" id="successModal">
+    <div class="modal-content">
+      <div class="modal-icon">🎉</div>
+      <h2 style="margin-bottom: 0.5rem;">Registration Successful!</h2>
+      <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+        Your details have been registered into the Holkar TechFest 2026 database. Keep your delegate ID safe for on-spot entry.
+      </p>
+      <button class="btn btn-primary" id="closeModalBtn" style="width: 100%; justify-content: center;">
+        Done & Register Another
+      </button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <h3>Govt. Model Science College (Holkar Science College)</h3>
+      <p style="margin: 0.5rem 0;">A.B. Road, Bhawarkua, Indore, Madhya Pradesh - 452001</p>
+      <ul class="footer-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="events.html">Events Directory</a></li>
+        <li><a href="schedule.html">Event Schedule</a></li>
+        <li><a href="register.html">Registration & Pass</a></li>
+      </ul>
+      <p style="font-size: 0.8rem; opacity: 0.7; margin-top: 1rem;">
+        © 2026 Holkar TechFest. Designed & Developed by CS & Web Design Dept.
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

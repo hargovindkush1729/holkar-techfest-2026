@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Complete 2-day timeline, schedule of events, venue details, and contact directory for Holkar TechFest 2026.">
+  <title>Event Schedule & Venue | Holkar TechFest 2026</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="bg-glow"></div>
+
+  <!-- Header & Navigation -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon">H</div>
+        <div class="brand-text">
+          <h1>Holkar TechFest</h1>
+          <span>Edition 2026</span>
+        </div>
+      </a>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">☰</button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="schedule.html" class="active">Schedule</a></li>
+        <li><a href="register.html" class="nav-cta">Register Now</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="section-header">
+      <div class="college-badge">Two-Day Itinerary</div>
+      <h2>Festival Timetable & Venues</h2>
+      <p>Plan your schedule across both competition days. All timings are in Indian Standard Time (IST).</p>
+    </div>
+
+    <!-- Day Switcher Tabs (JS Powered) -->
+    <div class="tabs-container">
+      <button class="tab-btn active" data-day="day1">Day 1: Inauguration & Qualifiers</button>
+      <button class="tab-btn" data-day="day2">Day 2: Grand Finals & Awards</button>
+    </div>
+
+    <!-- Timeline Day 1 -->
+    <div class="timeline" id="day1Schedule">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-time">09:00 AM - 10:30 AM</span>
+          <h4>Grand Opening & Keynote Address</h4>
+          <p>Lamp lighting, address by Principal Sir & HOD Computer Science, followed by announcement of fest guidelines.</p>
+          <small style="color: var(--accent-cyan); display: block; margin-top: 0.5rem;">📍 Main Auditorium, Holkar Science College</small>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-time">11:00 AM - 01:00 PM</span>
+          <h4>Bug Hunt & Tech Trivia Prelims</h4>
+          <p>Round 1 written and terminal assessment for debugging and computer science general trivia.</p>
+          <small style="color: var(--accent-cyan); display: block; margin-top: 0.5rem;">📍 CS Lab 1 & Seminar Hall B</small>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-time">01:00 PM - 02:00 PM</span>
+          <h4>Networking Lunch & Refreshments</h4>
+          <p>Complimentary lunch for registered outstation teams and delegates at the central food court.</p>
+          <small style="color: var(--accent-cyan); display: block; margin-top: 0.5rem;">📍 College Canteen Lawns</small>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-time">02:30 PM - Ongoing</span>
+          <h4>CodeSprint 24-Hour Hackathon Kickoff</h4>
+          <p>Problem statements released. Teams begin designing architectures and initial sprint coding.</p>
+          <small style="color: var(--accent-cyan); display: block; margin-top: 0.5rem;">📍 Advanced Computing Centre (Block C)</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- Timeline Day 2 -->
+    <div class="timeline" id="day2Schedule" style="display: none;">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-time">09:30 AM - 12:30 PM</span>
+          <h4>WebCraft: Frontend & UI Design Battle</h4>
+          <p>Vocational Web Design 3-hour live coding marathon. Participants code real-time responsive landing pages.</p>
+          <small style="color: var(--accent-cyan); display: block; margin-top: 0.5rem;">📍 Web Technology Lab (Room 204)</small>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-time">11:00 AM - 02:00 PM</span>
+          <h4>RoboWars & Combat Finals</h4>
+          <p>High-octane metal combat in the custom perimeter enclosure. Quarterfinals, semifinals, and championship matches.</p>
+          <small style="color: var(--accent-cyan); display: block; margin-top: 0.5rem;">📍 Open Air Quadrangle Arena</small>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-time">02:30 PM - 04:00 PM</span>
+          <h4>Hackathon Project Pitch & Jury Evaluation</h4>
+          <p>Top 10 shortlisted CodeSprint teams demo live working prototypes before industry judges.</p>
+          <small style="color: var(--accent-cyan); display: block; margin-top: 0.5rem;">📍 Conference Hall 1</small>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-time">04:30 PM - 06:00 PM</span>
+          <h4>Prize Distribution & Valedictory Ceremony</h4>
+          <p>Trophy presentation, ₹1,00,000 cash prize disbursement, certificate distribution, and closing remarks.</p>
+          <small style="color: var(--accent-cyan); display: block; margin-top: 0.5rem;">📍 Main Auditorium</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- Campus & Contact Info Section -->
+    <div class="contact-grid">
+      <!-- Venue & Map Details -->
+      <div class="contact-card">
+        <h3>🏛️ Venue & Campus Location</h3>
+        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+          Govt. Model Science College (Holkar Science College) is situated centrally in Indore with seamless bus and BRTS connectivity.
+        </p>
+        <ul class="contact-info-list">
+          <li><strong>Address:</strong> A.B. Road, Bhawarkua, Indore, MP - 452001</li>
+          <li><strong>Nearest Stop:</strong> Bhawarkua BRTS Station (2 min walk)</li>
+          <li><strong>Landmark:</strong> Near Holkar College Ground / DAVV Campus</li>
+          <li><strong>Helpdesk:</strong> Room 102, Dept. of Computer Science</li>
+        </ul>
+      </div>
+
+      <!-- Coordinators & Query -->
+      <div class="contact-card">
+        <h3>📞 Event Coordinators</h3>
+        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+          Have questions regarding accommodation, rules, or team registration? Reach out to our student heads.
+        </p>
+        <ul class="contact-info-list">
+          <li><strong>Faculty Head:</strong> Dr. CS Convenor (+91 94250 XXXXX)</li>
+          <li><strong>Student Lead:</strong> TechFest President (+91 98260 XXXXX)</li>
+          <li><strong>Web Lead:</strong> Web Design Coordinator (+91 97550 XXXXX)</li>
+          <li><strong>Official Email:</strong> techfest@holkarscience.edu.in</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <h3>Govt. Model Science College (Holkar Science College)</h3>
+      <p style="margin: 0.5rem 0;">A.B. Road, Bhawarkua, Indore, Madhya Pradesh - 452001</p>
+      <ul class="footer-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="events.html">Events Directory</a></li>
+        <li><a href="schedule.html">Event Schedule</a></li>
+        <li><a href="register.html">Registration & Pass</a></li>
+      </ul>
+      <p style="font-size: 0.8rem; opacity: 0.7; margin-top: 1rem;">
+        © 2026 Holkar TechFest. Designed & Developed by CS & Web Design Dept.
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

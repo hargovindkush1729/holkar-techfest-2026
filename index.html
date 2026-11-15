@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Holkar TechFest 2026 - Central India's Premier College Tech & Web Design Fest at Govt. Model Science College (Holkar College), Indore.">
+  <title>Holkar TechFest 2026 | Home</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="bg-glow"></div>
+
+  <!-- Header & Navigation -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon">H</div>
+        <div class="brand-text">
+          <h1>Holkar TechFest</h1>
+          <span>Edition 2026</span>
+        </div>
+      </a>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">☰</button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="register.html" class="nav-cta">Register Now</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="college-badge">Govt. Holkar Science College, Indore • Dept. of Computer Science</div>
+      <h1 class="hero-title">
+        Step Into The Future of <br>
+        <span class="gradient-text">Code & Web Design</span>
+      </h1>
+      <p class="hero-desc">
+        Join Central India's biggest inter-collegiate technical symposium. Compete with top developers, designers, and innovators across 12+ high-stakes challenges.
+      </p>
+
+      <!-- Live JS Countdown Timer -->
+      <div class="countdown-box">
+        <div class="time-card">
+          <span class="number" id="days">00</span>
+          <span class="label">Days</span>
+        </div>
+        <div class="time-card">
+          <span class="number" id="hours">00</span>
+          <span class="label">Hours</span>
+        </div>
+        <div class="time-card">
+          <span class="number" id="minutes">00</span>
+          <span class="label">Minutes</span>
+        </div>
+        <div class="time-card">
+          <span class="number" id="seconds">00</span>
+          <span class="label">Seconds</span>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="btn-group">
+        <a href="events.html" class="btn btn-primary">Browse All Events →</a>
+        <a href="register.html" class="btn btn-secondary">Get Virtual Pass</a>
+      </div>
+    </section>
+
+    <!-- Key Statistics Strip -->
+    <section class="stats-strip">
+      <div class="stat-item">
+        <h3 class="gradient-text">12+</h3>
+        <p>Tech Competitions</p>
+      </div>
+      <div class="stat-item">
+        <h3 class="gradient-text">₹1,00,000</h3>
+        <p>Total Prize Pool</p>
+      </div>
+      <div class="stat-item">
+        <h3 class="gradient-text">1,500+</h3>
+        <p>Expected Footfall</p>
+      </div>
+      <div class="stat-item">
+        <h3 class="gradient-text">2 Days</h3>
+        <p>Continuous Action</p>
+      </div>
+    </section>
+
+    <!-- Flagship Events Showcase -->
+    <section style="margin-top: 4rem;">
+      <div class="section-header">
+        <h2>Flagship Competitions</h2>
+        <p>Hand-crafted technical challenges designed to test problem-solving, UI aesthetics, and algorithmic precision.</p>
+      </div>
+
+      <div class="cards-grid">
+        <!-- Event Card 1 -->
+        <article class="event-card">
+          <span class="card-tag tag-web">Web Design Special</span>
+          <h3>WebCraft UI/UX Battle</h3>
+          <p>Design and code a fully functional, responsive modern web landing page in 3 hours using pure HTML/CSS and creativity.</p>
+          <div class="event-meta">
+            <span>Team: <strong>1-2 Members</strong></span>
+            <span>Prize: <strong>₹15,000</strong></span>
+          </div>
+          <a href="register.html?event=WebCraft" class="btn btn-secondary" style="width: 100%; justify-content: center;">Register For This</a>
+        </article>
+
+        <!-- Event Card 2 -->
+        <article class="event-card">
+          <span class="card-tag tag-coding">Computer Science</span>
+          <h3>CodeSprint 24-Hr Hackathon</h3>
+          <p>Solve pressing real-world campus & civic problems using AI, Web, or Mobile frameworks. Mentorship & food included.</p>
+          <div class="event-meta">
+            <span>Team: <strong>2-4 Members</strong></span>
+            <span>Prize: <strong>₹30,000</strong></span>
+          </div>
+          <a href="register.html?event=CodeSprint" class="btn btn-secondary" style="width: 100%; justify-content: center;">Register For This</a>
+        </article>
+
+        <!-- Event Card 3 -->
+        <article class="event-card">
+          <span class="card-tag tag-robotics">Robotics & IoT</span>
+          <h3>RoboWars: Combat Arena</h3>
+          <p>Custom-built bots battle in a restricted metal arena until only one operational bot remains standing.</p>
+          <div class="event-meta">
+            <span>Team: <strong>2-3 Members</strong></span>
+            <span>Prize: <strong>₹20,000</strong></span>
+          </div>
+          <a href="register.html?event=RoboWars" class="btn btn-secondary" style="width: 100%; justify-content: center;">Register For This</a>
+        </article>
+      </div>
+
+      <div style="text-align: center; margin-top: 2.5rem;">
+        <a href="events.html" class="btn btn-primary">View All 12 Events →</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <h3>Govt. Model Science College (Holkar Science College)</h3>
+      <p style="margin: 0.5rem 0;">A.B. Road, Bhawarkua, Indore, Madhya Pradesh - 452001</p>
+      <ul class="footer-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="events.html">Events Directory</a></li>
+        <li><a href="schedule.html">Event Schedule</a></li>
+        <li><a href="register.html">Registration & Pass</a></li>
+      </ul>
+      <p style="font-size: 0.8rem; opacity: 0.7; margin-top: 1rem;">
+        © 2026 Holkar TechFest. Designed & Developed by CS & Web Design Dept.
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
